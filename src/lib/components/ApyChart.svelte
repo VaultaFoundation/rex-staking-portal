@@ -12,7 +12,7 @@
     let canvas, ctx, chart;
 
     function calculateAPY(stakedAmount:number) {
-        const totalEmissions = 31250000; // 31.25M EOS annually
+        const totalEmissions = 31250000; // 31.25M A annually
         return (totalEmissions / stakedAmount) * 100;
     }
 

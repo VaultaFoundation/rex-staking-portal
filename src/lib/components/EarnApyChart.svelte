@@ -147,7 +147,7 @@
                             return 'Day: ' + title;
                         },
                         label: function(tooltipItem) {
-                            return 'Yield: ' + tooltipItem.formattedValue + ' EOS';
+                            return 'Yield: ' + tooltipItem.formattedValue + ' A';
                         }
                     }
                 }

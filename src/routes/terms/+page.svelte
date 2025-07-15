@@ -12,10 +12,10 @@
         <div style="max-width: 900px;">
             <div style="width: 10px; height: 100px;"></div>
             <GlassBox class="mt-2 overflow-hidden">
-                <h1>TERMS AND CONDITIONS FOR EOS NETWORK STAKING PLATFORM</h1>
+                <h1>TERMS AND CONDITIONS FOR VAULTA NETWORK STAKING PLATFORM</h1>
 
                 <h2>1. Acceptance of Terms</h2>
-                <p>By accessing or using the EOS Network Staking Platform (the “Platform”), you (“User”) agree to be bound by these Terms and Conditions (“Terms”). If you do not agree to all of these Terms, you must not use the Platform.</p>
+                <p>By accessing or using the Vaulta Network Staking Platform (the “Platform”), you (“User”) agree to be bound by these Terms and Conditions (“Terms”). If you do not agree to all of these Terms, you must not use the Platform.</p>
 
                 <h2>2. Eligibility and User Responsibility</h2>
                 <h3>2.1 Minimum Age</h3>
@@ -36,7 +36,7 @@
 
                 <h2>4. Staking Services Overview</h2>
                 <h3>4.1 Description</h3>
-                <p>The Platform enables Users to stake EOS tokens in exchange for potential rewards. Specific details on staking options, reward structures, and lock-up periods are provided in your user dashboard.</p>
+                <p>The Platform enables Users to stake A tokens in exchange for potential rewards. Specific details on staking options, reward structures, and lock-up periods are provided in your user dashboard.</p>
 
                 <h3>4.2 No Guarantee of Earnings</h3>
                 <p>All staking opportunities are provided on an “as-available” basis, and we do not guarantee any specific return or profit.</p>
@@ -113,7 +113,7 @@
                 <hr class="py-5 mt-10" />
                 <p><strong>BY USING THE PLATFORM, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREED TO THESE TERMS AND CONDITIONS.</strong></p>
                 <hr class="py-5 mt-10" />
-                <p>The Website is operated by the EOS Network Foundation, with address at 3000, 700-9th Avenue, SW, Calgary, Alberta, T2P 3V4, Canada</p>
+                <p>The Website is operated by the Vaulta Foundation, with address at 3000, 700-9th Avenue, SW, Calgary, Alberta, T2P 3V4, Canada</p>
             </GlassBox>
             <section class="text-white max-w-2xl w-full px-4">
 

@@ -26,7 +26,7 @@
 
 </section>
 <figure class="text-sm text-white w-full text-right mt-1">
-    You have {balance} EOS {suffix}
+    You have {balance} A {suffix}
 </figure>
 
 <style lang="scss">

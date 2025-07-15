@@ -11,17 +11,17 @@
                 <span class="text-black bg-yellow-400 px-2 py-1 rounded">annual reward / total staked</span>
                 <br />
                 <br />
-                However, keep in mind that the rate will continuously change as more people stake or unstake their EOS.
+                However, keep in mind that the rate will continuously change as more people stake or unstake their A.
             `
         },
         {
             question: 'Where does the yield come from?',
             answer:`
-                The EOS Network has a pre-allocated 250,000,000 EOS staking reward pool that gets released on a halving schedule every
+                The Vaulta Network has a pre-allocated 250,000,000 A staking reward pool that gets released on a halving schedule every
                 4 years.
                 <br />
                 <br />
-                For instance, the first period will have 125,000,000 EOS spread across 4 years (31,250,000 EOS per year).
+                For instance, the first period will have 125,000,000 A spread across 4 years (31,250,000 A per year).
             `,
         },
         {
@@ -44,7 +44,7 @@
             `,
         },
         {
-            question: 'Can I immediately unstake and get my EOS back?',
+            question: 'Can I immediately unstake and get my A back?',
             answer:`
                 No, you must wait 21 days once you unstake.
             `,
@@ -55,17 +55,17 @@
         //     `,
         // },
         {
-            question: `Does my unstaking EOS still produce yield?`,
+            question: `Does my unstaking A still produce yield?`,
             answer: `Yes!
-            Your EOS will continue to produce yield until the end of the staking period,
+            Your A will continue to produce yield until the end of the staking period,
             until it is claimed or auto-claimed by doing another action like staking or unstaking.`,
         },
         {
-            question: `I didn't get exactly the amount of EOS I was expecting. Why?`,
+            question: `I didn't get exactly the amount of A I was expecting. Why?`,
             answer: `
-            When you stake EOS you get another token in return (REX).
+            When you stake A you get another token in return (REX).
             In order to make this interface as simple as possible all of the conversions to and from that token are handled for you.
-            However, this sometimes means tiny differences in the amount of EOS you unstake.`
+            However, this sometimes means tiny differences in the amount of A you unstake.`
         }
     ]
 

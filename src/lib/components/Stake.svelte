@@ -60,9 +60,9 @@
     {/if}
 
     <InfoRows class="mt-2" rows={[
-        ["You will stake", `${commaNumber(amount)} EOS`, "opacity-70"],
-        ["Estimated daily yield", `${commaNumber(amount*(apy/100)/365)} EOS`],
-        ["Estimated annual yield", `${commaNumber(amount*(apy/100))} EOS`, "font-black !text-yellow-300"]
+        ["You will stake", `${commaNumber(amount)} A`, "opacity-70"],
+        ["Estimated daily yield", `${commaNumber(amount*(apy/100)/365)} A`],
+        ["Estimated annual yield", `${commaNumber(amount*(apy/100))} A`, "font-black !text-yellow-300"]
     ]} />
 
     {#if amount > 0}
@@ -70,12 +70,12 @@
     {/if}
 
     <InfoBox class="mt-5">
-        The APY is an estimate, and fluctuates based on the total amount of staked EOS.
+        The APY is an estimate, and fluctuates based on the total amount of staked A.
         <b class="text-white opacity-70">
             Unstaking starts a 21 day release timer.
         </b>
         <br />
         <br />
-        <u><b>You will never get back less EOS.</b></u>
+        <u><b>You will never get back less A.</b></u>
     </InfoBox>
 </GlassBox>

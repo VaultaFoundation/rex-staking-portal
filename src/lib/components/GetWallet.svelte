@@ -35,7 +35,7 @@
 <section class="my-10 w-full">
 
     <figure class="text-white text-center opacity-50 font-bold">
-        Need an EOS account?
+        Need an A account?
     </figure>
 
     <section class="w-full flex items-center justify-center gap-2 mt-1 max-lg:flex-col max-lg:gap-10">

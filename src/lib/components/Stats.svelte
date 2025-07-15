@@ -34,7 +34,7 @@
 
     <section class="flex justify-between relative max-lg:flex-col mt-5">
         <section>
-            <figure class="text-sm">TVL (EOS)</figure>
+            <figure class="text-sm">TVL (A)</figure>
             <h1 class="text-3xl font-bold -mt-1 flex">
                 <LogoIcon width={30} class="mr-2" />
                 {readableNumber(totalStaked)}</h1>
@@ -47,11 +47,11 @@
 
     <section class="mt-10">
         <figure class="text-xl font-bold text-center">
-            Staked EOS (TVL) vs APY
+            Staked A (TVL) vs APY
         </figure>
         <figure class="text-sm text-center">
             The yellow dot below shows what the APY will be once reaching the next TVL target.
-            As more EOS is staked, the APY will decrease.
+            As more A is staked, the APY will decrease.
         </figure>
     </section>
 
@@ -63,7 +63,7 @@
     </InfoBox>
 
     <figure class="text-xl font-bold text-center">
-        Staked EOS (TVL)
+        Staked A (TVL)
     </figure>
     <iframe class="w-full aspect-[4/3]" src="https://defillama.com/chart/protocol/vaulta-rex?denomination=EOS&theme=dark" title="DefiLlama" frameborder="0"></iframe>
     <figure class="text-sm text-center mt-2">

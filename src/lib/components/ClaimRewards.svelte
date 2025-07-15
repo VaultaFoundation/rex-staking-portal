@@ -21,7 +21,7 @@
 
     $: unstaking = WharfService.pendingClaimableBalances().filter(x => !x.savings).map(x => {
         return [
-            `${parseFloat(parseFloat(WharfService.convertRexToEos(parseFloat(x.rex.toString())).toString()).toFixed(4))} EOS`,
+            `${parseFloat(parseFloat(WharfService.convertRexToEos(parseFloat(x.rex.toString())).toString()).toFixed(4))} A`,
             x.date.toDateString()];
     }).sort((a, b) => +new Date(a[1]) - +new Date(b[1]));
 
@@ -38,7 +38,7 @@
             </button>
 
             <InfoRows class="mt-2" rows={[
-                ["You can claim", `${commaNumber(withdrawable)} EOS`, "font-black !text-yellow-300"]
+                ["You can claim", `${commaNumber(withdrawable)} A`, "font-black !text-yellow-300"]
             ]} />
         {:else}
             <button class="btn btn-disabled" disabled>
@@ -55,7 +55,7 @@
         <section class="flex justify-between relative mt-10">
             <section>
                 <figure class="text-sm">Currently unstaking</figure>
-                <h1 class="text-3xl font-bold -mt-1">{totalUnstakingInEos} EOS</h1>
+                <h1 class="text-3xl font-bold -mt-1">{totalUnstakingInEos} A</h1>
             </section>
         </section>
         <figure class="text-white text-xs text-opacity-50 mt-5">

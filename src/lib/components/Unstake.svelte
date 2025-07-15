@@ -46,7 +46,7 @@
 
     <InfoRows class="mt-2" rows={[
         ["Will be available to claim on", `${twentyOneDaysFromNow.toDateString()}`, "opacity-70"],
-        ["You are unstaking", `${amount} EOS`, "font-black"]
+        ["You are unstaking", `${amount} A`, "font-black"]
     ]} />
 
     <InfoBox class="mt-10">

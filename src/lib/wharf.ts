@@ -50,7 +50,7 @@ export default class WharfService {
 
 
         WharfService.sessionKit = new SessionKit({
-                appName: "eosstaking",
+                appName: "staking",
                 chains,
                 ui: new WebRenderer(),
                 walletPlugins: [
@@ -136,7 +136,7 @@ export default class WharfService {
 
     static async refreshEosPrice(){
         const price = await fetch('https://www.api.bloks.io/ticker/%5Bobject%20Object%5D').then(x => x.json()).then(x => x).catch(err => {
-            console.error('Error fetching EOS price', err);
+            console.error('Error fetching A price', err);
             return null;
         })
 
@@ -167,16 +167,16 @@ export default class WharfService {
         if (!WharfService.session) return;
 
         return WharfService.session?.client.v1.chain.get_table_rows({
-            code: "eosio.token",
+            code: "core.vaulta",
             scope: WharfService.session.actor,
             table: "accounts",
             json: true,
         }).then((res:any) => {
-            const row = res.rows.find((row:any) => row.balance.split(' ')[1] === 'EOS');
+            const row = res.rows.find((row:any) => row.balance.split(' ')[1] === 'A');
             return row ? parseFloat(row.balance.split(' ')[0]) : 0;
         }).catch(err => {
             console.error(err)
-            toast.error('There was a problem getting your EOS balance. Check the console for more information about what happened.')
+            toast.error('There was a problem getting your A balance. Check the console for more information about what happened.')
             return null;
         });
     }
@@ -313,15 +313,15 @@ export default class WharfService {
         if (!WharfService.session) return;
 
         if(eos <= 0) {
-            toast.error('You must enter a positive amount of EOS to buy REX.')
+            toast.error('You must enter a positive amount of A to buy REX.')
             return null;
         }
 
-        const amount = `${eos.toFixed(4)} EOS`
+        const amount = `${eos.toFixed(4)} A`
 
         const actions:any[] = [
             {
-                account: "eosio",
+                account: "core.vaulta",
                 name: "deposit",
                 authorization: [WharfService.session?.permissionLevel],
                 data: {
@@ -330,7 +330,7 @@ export default class WharfService {
                 }
             },
             {
-                account: "eosio",
+                account: "core.vaulta",
                 name: "buyrex",
                 authorization: [WharfService.session?.permissionLevel],
                 data: {
@@ -343,7 +343,7 @@ export default class WharfService {
         const claimableBalance = WharfService.claimableBalance();
         if(claimableBalance > 0 && claimableBalance < 10000){
             actions.unshift({
-                account: "eosio",
+                account: "core.vaulta",
                 name: "mvtosavings",
                 authorization: [WharfService.session?.permissionLevel],
                 data: {
@@ -356,7 +356,7 @@ export default class WharfService {
         return WharfService.session?.transact({
             actions
         } as any).then(x => {
-            success(`Successfully staked ${eos} EOS!`);
+            success(`Successfully staked ${eos} A!`);
 
             AnalyticsService.pushEvent('staked', {
                 eos,
@@ -394,7 +394,7 @@ export default class WharfService {
         return WharfService.session?.transact({
             actions: [
                 {
-                    account: "eosio",
+                    account: "core.vaulta",
                     name: "mvfrsavings",
                     authorization: [WharfService.session?.permissionLevel],
                     data: {
@@ -404,7 +404,7 @@ export default class WharfService {
                 }
             ]
         } as any).then(x => {
-            success(`Successfully unstaked ${WharfService.convertRexToEos(rex)} EOS!`);
+            success(`Successfully unstaked ${WharfService.convertRexToEos(rex)} A!`);
 
             AnalyticsService.pushEvent('unstaked', {
                 rex,
@@ -458,19 +458,19 @@ export default class WharfService {
 
         const actions:any[] = [
             {
-                account: "eosio",
+                account: "core.vaulta",
                 name: "withdraw",
                 authorization: [WharfService.session?.permissionLevel],
                 data: {
                     owner: WharfService.session?.actor,
-                    amount: `${totalEos} EOS`
+                    amount: `${totalEos} A`
                 }
             }
         ]
 
         if(claimable > 0){
             actions.unshift({
-                account: "eosio",
+                account: "core.vaulta",
                 name: "sellrex",
                 authorization: [WharfService.session?.permissionLevel],
                 data: {
@@ -483,7 +483,7 @@ export default class WharfService {
         return WharfService.session?.transact({
             actions: actions as any
         }).then(x => {
-            success(`Successfully claimed ${totalEos} EOS!`);
+            success(`Successfully claimed ${totalEos} A!`);
 
             AnalyticsService.pushEvent('claimed', {
                 rex: claimable,
